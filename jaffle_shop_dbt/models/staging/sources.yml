@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: jaffle_shop
+    schema: analytics_dev
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_items
+      - name: raw_products
+      - name: raw_stores
+      - name: raw_supplies
+      

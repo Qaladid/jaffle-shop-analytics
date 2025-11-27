@@ -1,0 +1,79 @@
+[0m22:42:58.761278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C971C10510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C971C02DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C971C10290>]}
+
+
+============================== 22:42:58.769779 | c6ac408c-deca-45a0-8dc0-e64f6c26a079 ==============================
+[0m22:42:58.769779 [info ] [MainThread]: Running with dbt=1.11.0-rc1
+[0m22:42:58.780441 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\LENOVO\\.dbt', 'use_colors': 'True', 'target_path': 'None', 'no_print': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt init jaffle_shop_dbt', 'printer_width': '80', 'write_json': 'True'}
+[0m22:42:58.893472 [debug] [MainThread]: Starter project path: C:\Users\LENOVO\onedrive\desktop\jaffle-shop-analytics\venv\Lib\site-packages\dbt\include\starter_project
+[0m22:42:58.959750 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:42:58.963794 [info ] [MainThread]: Setting up your profile.
+[0m22:53:57.624844 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m22:53:57.626861 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m22:53:57.628877 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m23:01:59.025026 [info ] [MainThread]: Profile jaffle_shop_dbt written to C:\Users\LENOVO\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:01:59.037225 [debug] [MainThread]: Command `dbt init` succeeded at 23:01:59.037225 after 1140.77 seconds
+[0m23:01:59.044301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C96AF12F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C971C10190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C96AF4FF50>]}
+[0m23:01:59.049336 [debug] [MainThread]: Flushing usage events
+[0m23:02:01.990539 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:15:56.628984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019240672010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019240670310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019240671ED0>]}
+
+
+============================== 08:15:56.641715 | 6f8018e0-d81c-49d6-ad46-c247717adf3e ==============================
+[0m08:15:56.641715 [info ] [MainThread]: Running with dbt=1.11.0-rc1
+[0m08:15:56.641715 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'profiles_dir': 'C:\\Users\\LENOVO\\.dbt', 'cache_selected_only': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True'}
+[0m08:15:56.742919 [info ] [MainThread]: dbt version: 1.11.0-rc1
+[0m08:15:56.742919 [info ] [MainThread]: python version: 3.11.5
+[0m08:15:56.742919 [info ] [MainThread]: python path: C:\Users\LENOVO\onedrive\desktop\jaffle-shop-analytics\venv\Scripts\python.exe
+[0m08:15:56.742919 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m08:15:58.669289 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m08:15:58.669289 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m08:15:58.669289 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m08:15:58.826961 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.postgres'
+[0m08:15:58.837956 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.postgres'
+[0m08:15:58.843563 [info ] [MainThread]: Using profiles dir at C:\Users\LENOVO\.dbt
+[0m08:15:58.851738 [info ] [MainThread]: Using profiles.yml file at C:\Users\LENOVO\.dbt\profiles.yml
+[0m08:15:58.851738 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\LENOVO\OneDrive\Desktop\jaffle-shop-analytics\dbt_project.yml
+[0m08:15:58.851738 [info ] [MainThread]: Configuration:
+[0m08:15:58.858008 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m08:15:58.860674 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:15:58.866285 [info ] [MainThread]: Required dependencies:
+[0m08:15:58.866285 [debug] [MainThread]: Executing "git --help"
+[0m08:15:58.978228 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m08:15:58.980226 [debug] [MainThread]: STDERR: "b''"
+[0m08:15:58.981229 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m08:15:58.983243 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m08:15:58.985536 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m08:15:58.987545 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "deaf", target "dev" invalid: Runtime Error
+    Could not find adapter type postgres!
+
+Runtime Error
+  Credentials in profile "modern_warehouse", target "dev" invalid: Runtime Error
+    Could not find adapter type postgres!
+
+
+[0m08:15:58.989537 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\LENOVO\OneDrive\Desktop\jaffle-shop-analytics\dbt_project.yml> not found
+
+[0m08:15:58.994587 [debug] [MainThread]: Command `dbt debug` failed at 08:15:58.993571 after 2.55 seconds
+[0m08:15:58.996559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192406CEBD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192406CFAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019239C22290>]}
+[0m08:15:59.001446 [debug] [MainThread]: Flushing usage events
+[0m08:16:01.158225 [debug] [MainThread]: An error was encountered while trying to flush usage events
