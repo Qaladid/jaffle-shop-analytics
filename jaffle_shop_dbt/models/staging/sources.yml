@@ -2,13 +2,109 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: Raw data from Jaffle Shop operational systems
     database: jaffle_shop
     schema: analytics_dev
     tables:
       - name: raw_customers
-      - name: raw_orders
-      - name: raw_items
-      - name: raw_products
-      - name: raw_stores
-      - name: raw_supplies
+        description: Customer master data
+        columns:
+          - name: id
+            description: Primary key for customers
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: Customer full name
       
+      - name: raw_orders
+        description: Order header information
+        columns:
+          - name: id
+            description: Primary key for orders
+            tests:
+              - unique
+              - not_null
+          - name: customer
+            description: Foreign key to customers 
+            tests:
+              - not_null
+          - name: store_id
+            description: Foreign key to stores
+          - name: subtotal
+            description: Order subtotal in cents
+          - name: tax_paid
+            description: Tax amount in cents
+          - name: order_total
+            description: Total order amount in cents
+      
+      - name: raw_items
+        description: Order line items (product-level detail)
+        columns:
+          - name: id
+            description: Primary key for order items
+            tests:
+              - unique
+              - not_null
+          - name: order_id
+            description: Foreign key to orders
+            tests:
+              - not_null
+          - name: sku
+            description: Foreign key to products
+            tests:
+              - not_null
+      
+      - name: raw_products
+        description: Product catalog
+        columns:
+          - name: sku
+            description: Stock keeping unit (primary key)
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: Product name
+          - name: type
+            description: Product type/category
+          - name: price
+            description: Product price in cents
+            tests:
+              - not_null
+          - name: description
+            description: Product description
+      
+      - name: raw_stores
+        description: Store locations
+        columns:
+          - name: id
+            description: Primary key for stores
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: Store location name
+          - name: tax_rate
+            description: Sales tax rate for the store
+          - name: opened_at
+            description: Date/time the store opened
+      
+      - name: raw_supplies
+        description: Supply data for products
+        columns:
+          - name: id
+            description: Primary key for supplies
+            tests:
+              - unique
+              - not_null
+          - name: sku
+            description: Foreign key to products
+          - name: name
+            description: Supply item name
+          - name: cost
+            description: Supply cost in cents
+          - name: perishable
+            description: Whether the supply is perishable
+
+
+
