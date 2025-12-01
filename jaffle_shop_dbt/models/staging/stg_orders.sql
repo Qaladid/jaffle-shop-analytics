@@ -30,9 +30,9 @@ renamed as (
         round(tax_paid::decimal / nullif(subtotal, 0), 4) as tax_rate_applied,
         
         -- Convert to dollars (if preferred)
-        subtotal / 100.0 as subtotal_usd,
-        tax_paid / 100.0 as tax_paid_usd,
-        order_total / 100.0 as order_total_usd
+        round(subtotal / 100.0, 2) as subtotal_usd,
+        round(tax_paid / 100.0, 2) as tax_paid_usd,
+        round(order_total / 100.0, 2) as order_total_usd
         
     from source
 )

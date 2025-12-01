@@ -90,15 +90,16 @@ sources:
             description: Date/time the store opened
       
       - name: raw_supplies
-        description: Supply data for products
+        description: Supply data for products - junction table linking supplies to products
         columns:
           - name: id
-            description: Primary key for supplies
+            description: supply identifier (not unique - one supply can be used for multiple products)
             tests:
-              - unique
               - not_null
           - name: sku
-            description: Foreign key to products
+            description: Product SKU (foreign key to products)
+            tests:
+              - not_null
           - name: name
             description: Supply item name
           - name: cost
