@@ -1,0 +1,107 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Customer dimension with lifetime value and behavioral metrics
+    columns:
+      - name: customer_id
+        description: Primary key for customers
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_products
+    description: Product dimension with pricing, supply costs, and sales metrics
+    columns:
+      - name: product_sku
+        description: Primary key for products
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_stores
+    description: Store dimension with location attributes and performance metrics
+    columns:
+      - name: store_id
+        description: Primary key for stores
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fact_orders
+    description: Order-level fact table with one row per order
+    columns:
+      - name: order_id
+        description: Primary key for orders
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Foreign key to dim_customers
+        data_tests:
+          - not_null
+          - relationships:
+              name: fk_orders_customer
+              config:
+                severity: error
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+      - name: store_id
+        description: Foreign key to dim_stores
+        data_tests:
+          - relationships:
+              name: fk_orders_store
+              config:
+                severity: error
+              arguments:
+                to: ref('dim_stores')
+                field: store_id
+      - name: order_total_usd
+        description: Total order amount in USD
+        data_tests:
+          - not_null
+
+  - name: fact_order_items
+    description: Order line item fact table with one row per item
+    columns:
+      - name: order_item_id
+        description: Primary key for order items
+        data_tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: Foreign key to fact_orders
+        data_tests:
+          - not_null
+          - relationships:
+              name: fk_order_items_order
+              config:
+                severity: error
+              arguments:
+                to: ref('fact_orders')
+                field: order_id
+      - name: product_sku
+        description: Foreign key to dim_products
+        data_tests:
+          - not_null
+          - relationships:
+              name: fk_order_items_product
+              config:
+                severity: error
+              arguments:
+                to: ref('dim_products')
+                field: product_sku
+      - name: customer_id
+        description: Foreign key to dim_customers
+        data_tests:
+          - relationships:
+              name: fk_order_items_customer
+              config:
+                severity: error
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+
+
+

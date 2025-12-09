@@ -1,5 +1,6 @@
 with source as (
     select * from {{ source('jaffle_shop', 'raw_products') }}
+    where sku is not null
 ),
 
 renamed as (
@@ -12,10 +13,10 @@ renamed as (
         description as product_description,
 
         -- Pricing (in cents)
-        price as product_price_cents,
+        coalesce(price, 0) as product_price_cents,
               
         -- Convert to dollars
-        round(price / 100.0, 1) as product_price_usd,
+        round(coalesce(price, 0) / 100.0, 1) as product_price_usd,
         
         -- Categorization (clean up type field)
         case
